@@ -6,8 +6,9 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = {
   mode: process.env.NODE_ENV,
   entry: {
-    index: "./src/index.js",
-    print: "./src/print.js",
+    index: { import: "./src/index.js", dependOn: "shared" },
+    // print: { import: "./src/print.js", dependOn: "shared" },
+    shared: "lodash",
   },
   output: {
     filename: "[name].bundle.js",
@@ -15,6 +16,9 @@ module.exports = {
     clean: true,
     publicPath: "",
   },
+  /* optimization: {
+    runtimeChunk: "single",
+  }, */
   devtool: "inline-source-map",
   devServer: {
     contentBase: "./dist",
@@ -61,8 +65,8 @@ module.exports = {
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // both options are optional
-      filename: "[name].css",
-      chunkFilename: "[id].css",
+      /* filename: "[name].css",
+      chunkFilename: "[id].css", */
     }),
   ],
 };
