@@ -1,0 +1,7 @@
+{
+  "editor.tabSize": 2,
+  "prettier.tabWidth": 2,
+  "prettier.endOfLine": "lf",
+  "files.eol": "\n",
+  "files.autoSave": "off"
+}
