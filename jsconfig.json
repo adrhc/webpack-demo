@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "module": "es6",
+        "target": "es6",
+        "checkJs": true,
+    },
+    "exclude": [
+        "bower_components",
+        "build",
+        "coverage",
+        "dist",
+        ".idea",
+        "jspm_packages",
+        "node_modules",
+        "**/node_modules/*",
+        ".parcel-cache"
+    ],
+    "include": [
+        "src/**/*.js"
+    ]
+}
