@@ -8,6 +8,7 @@ function component() {
 
 	// Lodash, now imported by this script
 	element.innerHTML = _.join(["Hello", "webpack", "<BR>"], " ");
+	element.classList.add('hello');
 
 	btn.innerHTML = "Click me and check the console!";
 	btn.onclick = printMe;
