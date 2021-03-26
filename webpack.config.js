@@ -9,27 +9,16 @@ module.exports = {
     index: "./src/index.js",
     print: "./src/print.js",
   },
-  devtool: "inline-source-map",
-  devServer: {
-    contentBase: "./dist",
-    port: 1234,
-  },
-  plugins: [
-    new HtmlWebpackPlugin({
-      title: "Development",
-    }),
-    new MiniCssExtractPlugin({
-      // Options similar to the same options in webpackOptions.output
-      // both options are optional
-      filename: "[name].css",
-      chunkFilename: "[id].css",
-    }),
-  ],
   output: {
     filename: "[name].bundle.js",
     path: path.resolve(__dirname, "dist"),
     clean: true,
     publicPath: "",
+  },
+  devtool: "inline-source-map",
+  devServer: {
+    contentBase: "./dist",
+    port: 1234,
   },
   module: {
     rules: [
@@ -65,4 +54,15 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: "Development",
+    }),
+    new MiniCssExtractPlugin({
+      // Options similar to the same options in webpackOptions.output
+      // both options are optional
+      filename: "[name].css",
+      chunkFilename: "[id].css",
+    }),
+  ],
 };
