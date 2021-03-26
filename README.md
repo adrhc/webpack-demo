@@ -7,6 +7,7 @@ https://docs.npmjs.com/cli/v7/configuring-npm/package-json
 # project commands
 ```bash
 npm run build
+npm start
 ```
 
 # libraries
