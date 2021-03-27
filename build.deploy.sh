@@ -1,6 +1,5 @@
 #!/bin/bash
 
-npm run build
-
+./build.sh
 echo -e "\ndeploying ..."
 ./deploy.sh
