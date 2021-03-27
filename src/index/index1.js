@@ -1,3 +1,3 @@
 export default function printIndex1() {
-  console.log("[printIndex1] begin");
+  console.log("[index1.printIndex1] begin");
 }

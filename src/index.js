@@ -1,8 +1,9 @@
 import _ from "lodash";
 import "./style.css";
-import "./style.scss";
-import printMe from "./print.js";
+import "./sass-style.scss";
+import printMe from "./index/print.js";
 import printIndex1 from "./index/index1.js";
+import printIndex2 from "./index/index2.js";
 
 function component() {
   const element = document.createElement("div");
@@ -16,6 +17,7 @@ function component() {
   btn.onclick = () => {
     printMe();
     printIndex1();
+    printIndex2();
   };
 
   element.appendChild(btn);
