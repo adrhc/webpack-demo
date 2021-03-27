@@ -1,3 +1,4 @@
+const webpack = require("webpack");
 const path = require("path");
 const json5 = require("json5");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
@@ -23,7 +24,7 @@ module.exports = {
       chunks: "all",
     },
   },
-  devtool: "inline-source-map",
+	devtool: devMode ? "inline-source-map" : "source-map",
   devServer: {
     contentBase: "./dist",
     port: 1234,
@@ -64,5 +65,10 @@ module.exports = {
       filename: devMode ? "[name].css" : "[name].[contenthash].css",
       chunkFilename: devMode ? "[id].css" : "[id].[contenthash].css",
     }),
+    /* new webpack.SourceMapDevToolPlugin({
+      filename: "sourcemaps/[file].map",
+      publicPath: "",
+      fileContext: "public",
+    }), */
   ],
 };
