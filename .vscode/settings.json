@@ -3,5 +3,6 @@
   "prettier.tabWidth": 2,
   "prettier.endOfLine": "lf",
   "files.eol": "\n",
-  "files.autoSave": "off"
+  "files.autoSave": "off",
+  "editor.insertSpaces": false
 }

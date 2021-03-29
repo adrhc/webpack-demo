@@ -1,6 +1,0 @@
-.hello {
-  color: blue;
-  background: url("./icon.ico");
-  /* https://www.npmjs.com/package/postcss-short#margin-and-padding */
-  -x-margin: _ auto;
-}

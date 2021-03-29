@@ -16,6 +16,7 @@
         ".parcel-cache"
     ],
     "include": [
-        "src/**/*.js"
+        "src/**/*.js",
+        "demo/demo1.js"
     ]
 }
